@@ -37,7 +37,6 @@
   display: block !important;
 }
 
-/* Prevent the portal theme from switching to its separate mobile layout. */
 @media (max-width: 1100px) {
   html,
   body {
@@ -72,7 +71,6 @@
   }
 }
 
-/* Consistent sidebar control. */
 .sidebar-toggle {
   display: inline-flex !important;
   align-items: center;
@@ -95,14 +93,33 @@
   content: "\\45" !important;
 }
 
-/* Remove the repeated portal brand name without affecting public pages. */
-.panel-header .logo,
+/* Show exactly one compact brand in the shared portal header. */
+.panel-header .logo {
+  display: block !important;
+  visibility: visible !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.panel-header .logo .brand-logo {
+  display: inline-block !important;
+  visibility: visible !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 220px;
+  font-size: 18px;
+}
+
+/* The mobile logo is a duplicate of the main logo and must stay hidden. */
 .panel-header .mob-logo,
-.panel-header .logo a,
 .panel-header .mob-logo a,
-.panel-header .logo .brand-logo,
-.panel-header .mob-logo .brand-logo,
-.sidebar-header .brand-logo {
+.panel-header .mob-logo .brand-logo {
   display: none !important;
   visibility: hidden !important;
   width: 0 !important;
@@ -110,4 +127,8 @@
   overflow: hidden !important;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+.sidebar-header .brand-logo {
+  display: none !important;
 }
