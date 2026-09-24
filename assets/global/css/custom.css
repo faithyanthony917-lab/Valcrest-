@@ -20,15 +20,16 @@
   vertical-align: middle;
 }
 
-/* Use the desktop dashboard layout at every screen size.
-   The active dashboard is portal/*; share/user is intentionally not used. */
+/* Active portal dashboards use one desktop layout at every viewport width. */
 .mobile-screen-show,
 .mobile-screen-only,
 .bottom-appbar,
 .mob-shortcut-btn,
 .all-feature-mobile,
 .mobile-ref-url,
-.mobile-transactions {
+.mobile-transactions,
+.user-wallets-mobile,
+.user-ranking-mobile {
   display: none !important;
 }
 
@@ -36,7 +37,7 @@
   display: block !important;
 }
 
-/* Prevent the portal dashboard from switching to its separate mobile layout. */
+/* Keep the full portal navigation visible on phones and Fold devices. */
 @media (max-width: 1100px) {
   html,
   body {
@@ -59,4 +60,32 @@
     margin-left: 280px !important;
     width: calc(100% - 280px) !important;
   }
+}
+
+/* Use a hamburger control consistently for the portal sidebar. */
+.sidebar-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  background: #0c2744;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sidebar-toggle i {
+  font-size: 20px;
+}
+
+.sidebar-toggle i::before {
+  content: "\\45" !important;
+}
+
+.panel-header .logo a,
+.panel-header .mob-logo a {
+  text-decoration: none;
 }
