@@ -20,7 +20,7 @@
   vertical-align: middle;
 }
 
-/* Active portal dashboards use one desktop layout at every viewport width. */
+/* One desktop/unfolded layout for every active portal viewport. */
 .mobile-screen-show,
 .mobile-screen-only,
 .bottom-appbar,
@@ -37,32 +37,42 @@
   display: block !important;
 }
 
-/* Keep the full portal navigation visible on phones and Fold devices. */
+/* Prevent the portal theme from switching to its separate mobile layout. */
 @media (max-width: 1100px) {
   html,
   body {
-    min-width: 1100px;
-    overflow-x: auto;
+    min-width: 1100px !important;
+    overflow-x: auto !important;
   }
 
   .panel-layout,
   .panel-header {
-    min-width: 1100px;
+    min-width: 1100px !important;
   }
 
-  .side-nav {
+  .side-nav,
+  .desktop-screen-show .side-nav {
     display: block !important;
     visibility: visible !important;
     transform: none !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 280px !important;
   }
 
   .page-container {
     margin-left: 280px !important;
     width: calc(100% - 280px) !important;
   }
+
+  .main-content {
+    width: 100% !important;
+  }
 }
 
-/* Use a hamburger control consistently for the portal sidebar. */
+/* Consistent sidebar control. */
 .sidebar-toggle {
   display: inline-flex !important;
   align-items: center;
@@ -70,7 +80,7 @@
   width: 42px;
   height: 42px;
   padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, .35);
   border-radius: 4px;
   background: #0c2744;
   color: #fff;
@@ -85,7 +95,19 @@
   content: "\\45" !important;
 }
 
+/* Remove the repeated portal brand name without affecting public pages. */
+.panel-header .logo,
+.panel-header .mob-logo,
 .panel-header .logo a,
-.panel-header .mob-logo a {
-  text-decoration: none;
+.panel-header .mob-logo a,
+.panel-header .logo .brand-logo,
+.panel-header .mob-logo .brand-logo,
+.sidebar-header .brand-logo {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
