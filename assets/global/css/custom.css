@@ -19,3 +19,44 @@
   display: block;
   vertical-align: middle;
 }
+
+/* Use the desktop dashboard layout at every screen size.
+   The active dashboard is portal/*; share/user is intentionally not used. */
+.mobile-screen-show,
+.mobile-screen-only,
+.bottom-appbar,
+.mob-shortcut-btn,
+.all-feature-mobile,
+.mobile-ref-url,
+.mobile-transactions {
+  display: none !important;
+}
+
+.desktop-screen-show {
+  display: block !important;
+}
+
+/* Prevent the portal dashboard from switching to its separate mobile layout. */
+@media (max-width: 1100px) {
+  html,
+  body {
+    min-width: 1100px;
+    overflow-x: auto;
+  }
+
+  .panel-layout,
+  .panel-header {
+    min-width: 1100px;
+  }
+
+  .side-nav {
+    display: block !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  .page-container {
+    margin-left: 280px !important;
+    width: calc(100% - 280px) !important;
+  }
+}
