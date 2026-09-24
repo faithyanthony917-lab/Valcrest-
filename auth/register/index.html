@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Valcrest Meridian Capital - Register</title>
+    <link rel="stylesheet" href="../auth.css" />
+    <link rel="stylesheet" href="../../assets/css/site-navigation.css">
+</head>
+  <body>
+    <main class="auth-shell">
+      <a class="auth-brand" href="../../">Valcrest Meridian Capital</a>
+      <section class="auth-card" aria-labelledby="register-title">
+        <h1 id="register-title">Create an account</h1>
+        <p>Register to continue with Valcrest Meridian Capital.</p>
+        <form data-static-form>
+          <div class="form-grid">
+            <div class="field">
+              <label for="first-name">First name</label>
+              <input id="first-name" name="firstName" type="text" autocomplete="given-name" required />
+            </div>
+            <div class="field">
+              <label for="last-name">Last name</label>
+              <input id="last-name" name="lastName" type="text" autocomplete="family-name" required />
+            </div>
+            <div class="field">
+              <label for="register-email">Email address</label>
+              <input id="register-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="username">Username</label>
+              <input id="username" name="username" type="text" autocomplete="username" required />
+            </div>
+            <div class="field full">
+              <label for="country">Country</label>
+              <select id="country" name="country" required>
+                <option value="">Select country</option>
+                <option>Nigeria</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+                <option>Canada</option>
+                <option>Ghana</option>
+                <option>South Africa</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="register-password">Password</label>
+              <input id="register-password" name="password" type="password" autocomplete="new-password" required />
+            </div>
+            <div class="field">
+              <label for="confirm-password">Confirm password</label>
+              <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" required />
+            </div>
+            <div class="field full">
+              <button class="button" type="submit">Create account</button>
+            </div>
+          </div>
+          <p class="auth-message" role="status">Create your account securely to access your Valcrest Meridian Capital portal.</p>
+        </form>
+        <div class="auth-links">
+          <span>Already have an account?</span>
+          <a href="../login/">Account login</a>
+        </div>
+      </section>
+    </main>
+    <script src="../auth.js"></script>
+    <script src="../../assets/js/site-navigation.js"></script>
+</body>
+</html>

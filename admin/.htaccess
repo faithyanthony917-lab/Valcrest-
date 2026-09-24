@@ -1,0 +1,4 @@
+Options -Indexes
+<FilesMatch "^index\.html$">
+  Require all denied
+</FilesMatch>

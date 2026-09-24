@@ -1,0 +1,117 @@
+:root {
+  --navy: #071b35;
+  --navy-light: #102d4d;
+  --orange: #e18222;
+  --cream: #f7f4ef;
+  --ink: #1d2a38;
+  --muted: #637083;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(225, 130, 34, .18), transparent 32rem),
+    linear-gradient(135deg, var(--navy), var(--navy-light));
+  color: var(--ink);
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.error-card {
+  background: var(--cream);
+  border-top: 5px solid var(--orange);
+  border-radius: 4px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .28);
+  max-width: 680px;
+  padding: clamp(32px, 7vw, 72px);
+  text-align: center;
+  width: 100%;
+}
+
+.brand {
+  color: var(--orange);
+  display: inline-block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: .08em;
+  margin-bottom: 36px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.error-code {
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5rem, 18vw, 9rem);
+  line-height: .9;
+  margin: 0 0 18px;
+}
+
+h1 {
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+
+p {
+  color: var(--muted);
+  margin: 0 auto 28px;
+  max-width: 480px;
+}
+
+.actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.button {
+  background: var(--orange);
+  border: 2px solid var(--orange);
+  border-radius: 3px;
+  color: var(--white);
+  display: inline-block;
+  font-weight: 700;
+  padding: 11px 22px;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.button.secondary {
+  background: transparent;
+  border-color: var(--navy);
+  color: var(--navy);
+}
+
+.button.secondary:hover,
+.button.secondary:focus-visible {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.button:focus-visible,
+.brand:focus-visible {
+  outline: 3px solid rgba(225, 130, 34, .45);
+  outline-offset: 3px;
+}

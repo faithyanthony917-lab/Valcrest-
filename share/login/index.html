@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Valcrest Meridian Capital - Login</title>
+    <link rel="stylesheet" href="../auth.css" />
+    <link rel="stylesheet" href="../../assets/css/site-navigation.css">
+</head>
+  <body>
+    <main class="auth-shell">
+      <a class="auth-brand" href="../../">Valcrest Meridian Capital</a>
+      <section class="auth-card" aria-labelledby="login-title">
+        <h1 id="login-title">Welcome Back!</h1>
+        <p>Sign in to continue with the Valcrest Meridian Capital user panel.</p>
+        <form data-static-form>
+          <div class="field">
+            <label for="login-identity">Email or username</label>
+            <input id="login-identity" name="identity" type="text" autocomplete="username" required />
+          </div>
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+          </div>
+          <div class="check-row">
+            <input id="remember" name="remember" type="checkbox" />
+            <label for="remember">Remember me</label>
+          </div>
+          <button class="button" type="submit">Account Login</button>
+          <p class="auth-message" role="status">Login requires a connected account service and is not available in this static copy.</p>
+        </form>
+        <div class="auth-links">
+          <a href="../register/">Signup for free</a>
+          <a href="../../forgot-password/">Forgot password</a>
+        </div>
+      </section>
+    </main>
+    <script src="../auth.js"></script>
+    <script src="../../assets/js/site-navigation.js"></script>
+</body>
+</html>
