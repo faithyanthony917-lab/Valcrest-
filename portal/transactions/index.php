@@ -27,7 +27,7 @@ $transactions = $query->fetchAll();
 </head>
 <body class="dark-theme">
 <div class="panel-layout">
-    <div class="panel-header"><div class="logo"><a href="/portal/dashboard"><span class="brand-logo">Valcrest Meridian Capital</span></a></div><div class="nav-wrap"><div class="nav-right"><a class="user-sidebar-btn" href="/portal/dashboard">Dashboard</a></div></div></div>
+    <?php require __DIR__ . '/../_header.php'; ?>
     <div class="page-container"><div class="main-content"><div class="section-gap"><div class="container-fluid">
         <div class="site-card"><div class="site-card-header"><h3 class="title">All Transactions</h3></div><div class="site-card-body"><div class="table-responsive">
             <table class="display data-table"><thead><tr><th>Date</th><th>Type</th><th>Description</th><th>Wallet</th><th>Amount</th><th>Status</th></tr></thead><tbody>
