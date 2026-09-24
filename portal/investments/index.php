@@ -12,6 +12,7 @@ $plans = $pdo->query(
      WHERE status = 'active'
      ORDER BY id"
 )->fetchAll();
+
 $walletQuery = $pdo->prepare(
     "SELECT id, currency, available_balance
      FROM accounts
@@ -33,10 +34,7 @@ $wallets = $walletQuery->fetchAll();
 </head>
 <body class="dark-theme">
 <div class="panel-layout">
-    <div class="panel-header">
-        <div class="logo"><a href="/portal/dashboard"><span class="brand-logo">Valcrest Meridian Capital</span></a></div>
-        <div class="nav-wrap"><div class="nav-right"><a class="user-sidebar-btn" href="/portal/dashboard">Dashboard</a></div></div>
-    </div>
+    <?php require __DIR__ . '/../_header.php'; ?>
     <div class="page-container"><div class="main-content"><div class="section-gap"><div class="container-fluid">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2>Investment Plans</h2>
