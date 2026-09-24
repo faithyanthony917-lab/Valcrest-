@@ -1,8 +1,0 @@
-Options -Indexes
-
-# User pages are generated as PHP files and perform the session gate before output.
-<FilesMatch "\.(html|htm)$">
-  Require all denied
-</FilesMatch>
-
-Header set X-Robots-Tag "noindex, nofollow, noarchive"
