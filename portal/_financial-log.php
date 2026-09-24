@@ -38,7 +38,7 @@ $action = $type === 'deposit' ? '/portal/deposits/logs' : '/portal/withdrawals/l
 <link rel="stylesheet" href="/assets/frontend/css/styles.css?var=2.1">
 </head>
 <body class="dark-theme"><div class="panel-layout">
-<?php require __DIR__ . '/../portal/_header.php'; ?>
+<?php require __DIR__ . '/_header.php'; ?>
 <div class="page-container"><div class="main-content"><div class="section-gap"><div class="container-fluid">
 <div class="row"><div class="col-xl-12"><div class="site-card"><div class="site-card-header"><h3 class="title"><?= htmlspecialchars($title, ENT_QUOTES, 'UTF-8') ?></h3></div><div class="site-card-body"><div class="site-table">
 <form action="<?= htmlspecialchars($action, ENT_QUOTES, 'UTF-8') ?>" method="get"><div class="search"><input type="text" name="query" placeholder="Search reference or status" value="<?= htmlspecialchars($search, ENT_QUOTES, 'UTF-8') ?>"><input type="date" name="date" value="<?= htmlspecialchars($date, ENT_QUOTES, 'UTF-8') ?>"><button type="submit" class="apply-btn">Search</button></div></form>
